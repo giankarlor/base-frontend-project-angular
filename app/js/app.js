@@ -1,3 +1,6 @@
+// Include our angular files
+require('angular');
+require('angular-ui-router');
 
 angular.module('baseApp', ['ui.router'])
 
@@ -26,7 +29,7 @@ angular.module('baseApp', ['ui.router'])
 
   }]);
 
-// Include external JS files in app.js
+// Include our app's external JS files
 require('./controllers');
 require('./services');
 require('./directives');
