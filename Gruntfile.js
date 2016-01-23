@@ -1,12 +1,20 @@
 module.exports = function(grunt) {
 
-    grunt.registerTask( 'default', [ 'clean', 'sass', 'copy', 'hapi', 'watch'] );
+    grunt.registerTask( 'default', [ 'clean', 'browserify', 'sass', 'copy', 'hapi', 'watch'] );
 
-    grunt.registerTask( 'build', [ 'clean', 'sass', 'copy' ] );
+    grunt.registerTask( 'build', [ 'clean', 'browserify', 'sass', 'copy' ] );
 
     grunt.registerTask( 'run', [ 'hapi', 'watch' ]);
 
     grunt.initConfig({
+
+        browserify: {
+            dist: {
+                files: {
+                    './dist/js/app.js': ['./app/js/app.js']
+                }
+            }
+        },
 
         sass: {
             dist: {
@@ -27,6 +35,7 @@ module.exports = function(grunt) {
                 ],
                 tasks: [
                     'clean',
+                    'browserify',
                     'sass',
                     'copy'
                 ],
@@ -55,17 +64,13 @@ module.exports = function(grunt) {
                     cwd: './app/sass'
                 }, {
                     expand: true,
-                    src: [ './**/*.js' ],
-                    dest: './dist/js',
-                    cwd: './app/js'
-                }, {
-                    expand: true,
                     src: [ './**/*.html' ],
                     dest: './dist/templates',
                     cwd: './app/templates'
                 }]
             }
         },
+
 
         hapi: {
             custom_options: {
@@ -86,5 +91,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-hapi');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-browserify');
 
 };
