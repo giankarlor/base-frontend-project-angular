@@ -84,9 +84,9 @@ A list of the Grunt plugins in this application.
 └── server.js
 ```
 
-All code, styles, markup, and assets should be saved to the `app` directory. Saving changes creates a new directory, `dist`, that holds final copies of the application content. `dist` is the directory the server uses to serve the content displayed by the browser. __Do not edit files in `dist`__ because it will reset changes to your work every time you save. Restrict all edits to files in the `app` directory.
+All code, styles, markup, and assets should be saved to the `app` directory. When your app is running with the `grunt` command, saving changes creates a new directory, `dist`, that holds final copies of the application content. `dist` is the directory the server uses to serve the content displayed by the browser. __Do not edit files in `dist`__ because it will reset changes to your work every time you save. Restrict all edits to files in the `app` directory.
 
-### Pages and Assets/Images
+## Pages and Assets
 
 Link pages with the `ui-sref` directive that's available with `ui-router`:
 
@@ -104,14 +104,14 @@ Add images to the `app/assets/images` directory. To reference images in HTML, us
 
 The Gruntfile is pre-configured to handle assets in a subfolder with the `png,jpg,jpeg,mp3` extensions.
 
->See lines 14 and 35 of `Gruntfile.js` for the accepted file extensions of assets.
+>See lines 29 and 52 of `Gruntfile.js` for the accepted file extensions of assets.
 
 
 **Difference between Pages and Templates**
 
 The `templates` directory should hold any HTML files used as templates in Angular states configured by UI Router. All other HTML files belong in the `pages` directory.
 
-### Deploying to Heroku
+## Deploying to Heroku
 
 Sign up for a [free Heroku account](http://api.heroku.com/signup), and install the [Heroku toolbelt](https://toolbelt.heroku.com/) for your operating system. The toolbelt is software that Heroku provides for running various deployment and application-related operations from the command line.
 
@@ -155,7 +155,7 @@ $ heroku open
 
 **Procfile**
 
-The `Procfile` is a file for [providing instructions to Heroku servers](https://devcenter.heroku.com/articles/procfile) that run after pushing new code to the repository. __Do not change the contents of the Procfile__ or Heroku will throw an error when you attempt to visit your application.
+The `Procfile` is a file for [providing instructions to Heroku servers](https://devcenter.heroku.com/articles/procfile) that run after pushing new code to the repository.
 
 **Troubleshooting**
 
@@ -174,6 +174,6 @@ This occurs because you haven't created keys with Heroku. Follow the steps outli
 
 Heroku keeps extensive documentation for many common errors when using its platform. Consult the [Dev Center docs](https://devcenter.heroku.com/) when you run into issues before messaging your mentor.
 
-### Credit
+#### Credit
 
 This project got a great start because of the work by [Joe Lipper](https://github.com/joelip). :beers:
