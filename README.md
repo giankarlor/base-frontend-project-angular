@@ -32,6 +32,39 @@ The default task runs a simple server on port 3000. To view it in a any browser,
 
 By default, the application is configured to be used in a Single-Page Application (SPA) with AngularJS. If you're working on a project that doesn't use AngularJS, see the instructions below [for configuring the server to run in a non-SPA](#configure-server-for-non-spas).
 
+## Grunt plugins
+
+A list of the Grunt plugins in this application.
+
+#### Watch
+
+[Grunt watch](https://github.com/gruntjs/grunt-contrib-watch) watches for changes to file content and then executes Grunt tasks when a change is detected.
+
+#### Copy
+
+[Grunt copy](https://github.com/gruntjs/grunt-contrib-copy) copies files from our development folders and puts them in the folder that will be served with the frontend of your application.
+
+#### Clean
+
+[Grunt clean](https://github.com/gruntjs/grunt-contrib-clean) "cleans" or removes all files in your distribution folder (`dist`) so that logic in your stylesheets, templates, or scripts isn't accidentally overridden by previous code in the directory.
+
+#### Sass
+
+[Grunt Sass](https://github.com/sindresorhus/grunt-sass) This task uses libsass, which is a Sass compiler in C++. It's a lot faster than the original Ruby compiler and fully compatible.
+
+#### Browserify
+[Browserify](https://github.com/substack/node-browserify) will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single `<script>` tag.
+
+#### Angular
+[Angular](https://www.npmjs.com/package/angular) is a structural framework for dynamic web apps.
+
+#### Angular UI Router
+[Angular UI Router](https://www.npmjs.com/package/angular-ui-router) a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine.
+
+#### Hapi
+
+[Grunt Hapi](https://github.com/athieriot/grunt-hapi) runs a server using [`HapiJS`](http://hapijs.com/). Happi is a Node web application framework with robust configuration options.
+
 ## Directory Structure
 
 ```
@@ -184,39 +217,6 @@ var Hapi = require('hapi'),
 
 Optionally, delete the `templates` directory and all references to it in `Gruntfile.js` to remove unnecessary files (templates are only useful for SPAs). However, keeping them in the repository won't affect your application.
 
-## Grunt plugins
-
-A list of the Grunt plugins in this application.
-
-#### Watch
-
-[Grunt watch](https://github.com/gruntjs/grunt-contrib-watch) watches for changes to file content and then executes Grunt tasks when a change is detected.
-
-#### Copy
-
-[Grunt copy](https://github.com/gruntjs/grunt-contrib-copy) copies files from our development folders and puts them in the folder that will be served with the frontend of your application.
-
-#### Clean
-
-[Grunt clean](https://github.com/gruntjs/grunt-contrib-clean) "cleans" or removes all files in your distribution folder (`dist`) so that logic in your stylesheets, templates, or scripts isn't accidentally overridden by previous code in the directory.
-
-#### Sass
-
-[Grunt Sass](https://github.com/sindresorhus/grunt-sass) This task uses libsass, which is a Sass compiler in C++. It's a lot faster than the original Ruby compiler and fully compatible.
-
-#### Browserify
-[Browserify](https://github.com/substack/node-browserify) will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single `<script>` tag.
-
-#### Angular
-[Angular](https://www.npmjs.com/package/angular) is a structural framework for dynamic web apps.
-
-#### Angular UI Router
-[Angular UI Router](https://www.npmjs.com/package/angular-ui-router) a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine.
-
-#### Hapi
-
-[Grunt Hapi](https://github.com/athieriot/grunt-hapi) runs a server using [`HapiJS`](http://hapijs.com/). Happi is a Node web application framework with robust configuration options.
-
-#### Credit
+### Credit
 
 This project got a great start because of the work by [Joe Lipper](https://github.com/joelip). :beers:
