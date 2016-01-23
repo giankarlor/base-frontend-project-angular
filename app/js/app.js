@@ -1,3 +1,4 @@
+
 angular.module('baseApp', ['ui.router'])
 
   .config(['$locationProvider', '$stateProvider', function($locationProvider, $stateProvider) {
@@ -24,3 +25,8 @@ angular.module('baseApp', ['ui.router'])
         });
 
   }]);
+
+// Include external JS files in app.js
+require('./controllers');
+require('./services');
+require('./directives');
