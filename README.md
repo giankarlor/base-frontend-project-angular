@@ -2,7 +2,7 @@
 
 ## Base Frontend Project
 
-A starter application for frontend development using Angular and Sass.
+A starter application for frontend development using AngularJS and Sass.
 
 ## Configuration
 
@@ -30,7 +30,7 @@ The default task runs a simple server on port 3000. To view it in a any browser,
 
 ## Grunt plugins
 
-A list of the Grunt plugins in this application.
+A list of the Grunt plugins in this application:
 
 #### Watch
 
@@ -46,7 +46,7 @@ A list of the Grunt plugins in this application.
 
 #### Sass
 
-[Grunt Sass](https://github.com/sindresorhus/grunt-sass) This task uses libsass, which is a Sass compiler in C++. It's a lot faster than the original Ruby compiler and fully compatible.
+[Grunt Sass](https://github.com/sindresorhus/grunt-sass) a Sass compiler.
 
 #### Browserify
 [Browserify](https://github.com/substack/node-browserify) will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single `<script>` tag.
