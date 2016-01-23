@@ -201,6 +201,9 @@ A list of the Grunt plugins in this application.
 
 [Grunt Sass](https://github.com/sindresorhus/grunt-sass) This task uses libsass, which is a Sass compiler in C++. It's a lot faster than the original Ruby compiler and fully compatible.
 
+#### Browserify
+[Browserify](https://github.com/substack/node-browserify) will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single `<script>` tag.
+
 #### Hapi
 
 [Grunt Hapi](https://github.com/athieriot/grunt-hapi) runs a server using [`HapiJS`](http://hapijs.com/). Happi is a Node web application framework with robust configuration options.
