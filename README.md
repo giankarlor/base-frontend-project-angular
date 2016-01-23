@@ -1,6 +1,8 @@
-## Frontend Base Project
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-A starter application for frontend development.
+## Base Frontend Project
+
+A starter application for frontend development using Angular and Sass.
 
 ## Configuration
 
@@ -43,6 +45,7 @@ By default, the application is configured to be used in a Single-Page Applicatio
 │   ├── scripts
 │   │   └── app.js
 │   └── templates
+│       └── example.html
 │       └── home.html
 ├── Gruntfile.js
 ├── LICENSE
@@ -214,6 +217,6 @@ A list of the Grunt plugins in this application.
 
 [Grunt Hapi](https://github.com/athieriot/grunt-hapi) runs a server using [`HapiJS`](http://hapijs.com/). Happi is a Node web application framework with robust configuration options.
 
-## Credit
+#### Credit
 
-This project is based on the work by [Joe Lipper](https://github.com/joelip).
+This project got a great start because of the work by [Joe Lipper](https://github.com/joelip). :beers:

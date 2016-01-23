@@ -1,16 +1,16 @@
 {
-  "name": "frontend-base-project",
+  "name": "base-frontend-project",
   "version": "0.0.1",
-  "description": "Starter project for frontend applications",
+  "description": "Starter project for frontend applications using Angular and Sass.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamigibbs/Base-Frontend-Project"
+    "url": "https://github.com/jamigibbs/base-frontend-project"
   },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Bloc and Jami Gibbs",
+  "author": "Jami Gibbs",
   "license": "ISC",
   "dependencies": {
     "hapi": "^7.5.0",
