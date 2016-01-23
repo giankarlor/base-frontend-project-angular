@@ -204,6 +204,12 @@ A list of the Grunt plugins in this application.
 #### Browserify
 [Browserify](https://github.com/substack/node-browserify) will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single `<script>` tag.
 
+#### Angular
+[Angular](https://www.npmjs.com/package/angular) is a structural framework for dynamic web apps.
+
+#### Angular UI Router
+[Angular UI Router](https://www.npmjs.com/package/angular-ui-router) a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine.
+
 #### Hapi
 
 [Grunt Hapi](https://github.com/athieriot/grunt-hapi) runs a server using [`HapiJS`](http://hapijs.com/). Happi is a Node web application framework with robust configuration options.
