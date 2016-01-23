@@ -18,7 +18,7 @@ The project uses Grunt to run tasks in development. To start, install the projec
 $ npm install
 ```
 
-## Run the Application
+### Run the Application
 
 Run the application using the Grunt file's `default` task:
 
@@ -107,7 +107,7 @@ The Gruntfile is pre-configured to handle assets in a subfolder with the `png,jp
 >See lines 14 and 35 of `Gruntfile.js` for the accepted file extensions of assets.
 
 
-### Difference between Pages and Templates
+**Difference between Pages and Templates**
 
 The `templates` directory should hold any HTML files used as templates in Angular states configured by UI Router. All other HTML files belong in the `pages` directory.
 
@@ -173,54 +173,6 @@ and the repository exists.
 This occurs because you haven't created keys with Heroku. Follow the steps outlined in [this article](https://devcenter.heroku.com/articles/keys) to create an SSH key and add it to Heroku.
 
 Heroku keeps extensive documentation for many common errors when using its platform. Consult the [Dev Center docs](https://devcenter.heroku.com/) when you run into issues before messaging your mentor.
-
-## Configure Server for Non-SPAs
-
-By default, this base project is configured to be used with SPAs. If you're not building a project with Angular, then modify `server.js` with the following:
-
-```diff
-var Hapi = require('hapi'),
-    path = require('path'),
-    port = process.env.PORT || 3000,
-    server = new Hapi.Server(port),
-    routes = {
-        css: {
-            method: 'GET',
-            path: '/css/{path*}',
-            handler: createDirectoryRoute('css')
-        },
-        js: {
-            method: 'GET',
-            path: '/scripts/{path*}',
-            handler: createDirectoryRoute('scripts')
-        },
-        assets: {
-            method: 'GET',
-            path: '/assets/{path*}',
-            handler: createDirectoryRoute('assets')
-        },
-        templates: {
-            method: 'GET',
-            path: '/templates/{path*}',
-            handler: createDirectoryRoute('templates')
-        },
--        spa: {
-+        staticPages: {
-             method: 'GET',
-             path: '/{path*}',
--            handler: {
--                file: path.join(__dirname, '/dist/index.html')
--            }
-+            handler: createDirectoryRoute('/')
-         }
-     };
-
--server.route([ routes.css, routes.js, routes.images, routes.templates, routes.spa ]);
-+server.route([ routes.css, routes.js, routes.images, routes.templates, routes.staticPages ]);
-...
-```
-
-Optionally, delete the `templates` directory and all references to it in `Gruntfile.js` to remove unnecessary files (templates are only useful for SPAs). However, keeping them in the repository won't affect your application.
 
 ### Credit
 
