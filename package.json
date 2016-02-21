@@ -1,6 +1,6 @@
 {
   "name": "base-frontend-project",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Starter project for frontend applications using Angular and Sass.",
   "repository": {
     "type": "git",

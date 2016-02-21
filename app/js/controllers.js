@@ -1,9 +1,17 @@
-angular.module('baseApp')
+(function(){
+  'use strict';
 
-  .controller('homeCtrl', ['$scope', function($scope){
+  angular
+    .module('baseApp')
+    .controller('homeCtrl', [ '$scope', homeCtrl ])
+    .controller('exampleCtrl', [ '$scope', exampleCtrl ]);
 
-  }])
+    function homeCtrl($scope){
 
-  .controller('exampleCtrl', ['$scope', function($scope){
+    }
 
-  }]);
+    function exampleCtrl($scope){
+
+    }
+
+})();

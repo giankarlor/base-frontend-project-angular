@@ -1,26 +1,33 @@
-angular.module('baseApp', ['ui.router'])
+(function(){
+  'use strict';
 
-  .config(['$locationProvider', '$stateProvider', function($locationProvider, $stateProvider) {
+  angular
+    .module('baseApp', ['ui.router'])
+    .config( [ '$locationProvider', '$stateProvider', config ] );
 
-    // Configure the app's path
-    $locationProvider.html5Mode({
-      // Disables hashbang mode
-      enabled: true,
-      // Unrelated to hashbang but avoids $location error
-      requireBase: false
-    });
+    function config($locationProvider, $stateProvider) {
 
-    // Setup the template routes/states
-    $stateProvider
+      // Configure the app's path
+      $locationProvider.html5Mode({
+        // Disables hashbang mode
+        enabled: true,
+        // Unrelated to hashbang but avoids $location error
+        requireBase: false
+      });
+
+      // Setup the template routes/states
+      $stateProvider
         .state('home', {
-            url: '/',
-            controller: 'homeCtrl',
-            templateUrl: '/templates/home.html'
+          url: '/',
+          controller: 'homeCtrl',
+          templateUrl: '/templates/home.html'
         })
         .state('example', {
-            url: '/example',
-            controller: 'exampleCtrl',
-            templateUrl: '/templates/example.html'
+          url: '/example',
+          controller: 'exampleCtrl',
+          templateUrl: '/templates/example.html'
         });
 
-  }]);
+    }
+
+})();

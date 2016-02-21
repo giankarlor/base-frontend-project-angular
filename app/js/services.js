@@ -1,15 +1,21 @@
-angular.module('baseApp')
+(function(){
+  'use strict';
 
-  .value('exampleNum', 12)
+  angular
+    .module('baseApp')
+    .value('exampleNum', 12)
+    .factory('baseFactory', ['exampleNum', baseFactory]);
 
-  .factory('baseFactory', ['exampleNum', function (exampleNum) {
+    function baseFactory(exampleNum) {
 
-    var city = 'Chicago';
+      var city = 'Chicago';
 
-    return {
-      location: function(){
-        return city;
-      }
-    };
+      return {
+        location: function(){
+          return city;
+        }
+      };
 
-  }]);
+    }
+
+})();
